@@ -15,12 +15,12 @@ try {
         'im' => '1733160024',
         'cmun' => '4314902',
         'razao' => 'Empresa Test Ltda',
-        'tpamb' => 1
+        'tpamb' => 2  //1-producao, 2-homologacao
     ];
 
     $configJson = json_encode($config);
 
-    $content = file_get_contents('expired_certificate.pfx');
+    $content = file_get_contents('office.pfx');
     $password = 'associacao';
     $cert = Certificate::readPfx($content, $password);
     
